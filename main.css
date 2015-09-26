@@ -8,7 +8,11 @@
 	display: inline-block;
 }
 
-.image img {
+div {
+	display: inline-block;
+}
+
+img {
 	width: 300px;
 	padding: 3px;
 	margin-right: 10px;
@@ -18,7 +22,7 @@
 	border-radius: 15px;
 }
 
-.image img:hover {
+img:hover {
 	transform: scale(1.05);
 	opacity: 1;
 	box-shadow: 0 0 16px black;
@@ -55,3 +59,32 @@ body {
 		color: white;
 	text-shadow: black 0 0 3px;
 }
+
+.base-class {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+@media (max-width: 1030px) {
+	body {
+		color: yellow;
+	}
+	img {
+		border: 2px solid yellow;
+	}
+	#container {
+	margin: 0 auto;
+	width: 700px;
+	}
+}
+ @media (max-width: 715px) {
+ 	img {
+		opacity: 1;
+	}
+	img:hover {
+	transform: scale(1);
+	box-shadow: 0 0 0;
+	}
+	#container {
+	margin: 0 auto;
+	width: 350px;
+ }
